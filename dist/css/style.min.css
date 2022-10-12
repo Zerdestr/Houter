@@ -1,0 +1,201 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+input,
+textarea {
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: Lexend;
+  font-display: swap;
+  src: url("../fonts/Lexend-Medium.woff2") format("woff2"), url("../fonts/Lexend-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lexend;
+  font-display: swap;
+  src: url("../fonts/Lexend-Regular.woff2") format("woff2"), url("../fonts/Lexend-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lexend;
+  font-display: swap;
+  src: url("../fonts/Lexend-SemiBold.woff2") format("woff2"), url("../fonts/Lexend-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+body {
+  color: #5e6282;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.88;
+  background-color: #fff;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(8, 8, 9, 0);
+  pointer-events: none;
+  z-index: 11;
+  transition: background-color 0.2s ease, left 0.2s ease;
+}
+body.no-scrol {
+  overflow: hidden;
+}
+body.no-scrol::before {
+  left: 330px;
+  background-color: rgba(8, 8, 9, 0.5);
+  pointer-events: auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.burger {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #212832;
+  left: 2px;
+  right: 2px;
+  top: 5px;
+  transition: transform 0.2s ease-in-out, top 0.2s ease-in-out;
+}
+.burger::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #212832;
+  left: 2px;
+  right: 2px;
+  bottom: 5px;
+  transition: transform 0.2s ease-in-out, bottom 0.2s ease-in-out;
+}
+.burger--active .burger__line {
+  height: 0;
+}
+.burger--active::after {
+  transform: rotate(45deg);
+  top: 14px;
+}
+.burger--active::before {
+  transform: rotate(-45deg);
+  bottom: 14px;
+}
+.burger__line {
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  right: 2px;
+  transform: translateY(-50%);
+  height: 2px;
+  background-color: #212832;
+  transition: height 0.2s ease-in-out;
+}
