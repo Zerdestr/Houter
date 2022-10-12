@@ -1,0 +1,78 @@
+.hero {
+  padding: 182px 0 92px;
+  background: url("../img/hero-bg.png") top right / 720px 720px no-repeat,
+    url("../img/hero-bg-2.png") top left / 741px 523px no-repeat;
+
+  &__title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.25;
+    color: $headline;
+    max-width: 360px;
+    margin-bottom: 24px;
+    text-transform: capitalize;
+    text-shadow: -0 -1px 0 #1b1c57, 0 -1px 0 #1b1c57, -0 1px 0 #1b1c57, 0 1px 0 #1b1c57, -1px -0 0 #1b1c57,
+      1px -0 0 #1b1c57, -1px 0 0 #1b1c57, 1px 0 0 #1b1c57, -1px -1px 0 #1b1c57, 1px -1px 0 #1b1c57, -1px 1px 0 #1b1c57,
+      1px 1px 0 #1b1c57, -1px -1px 0 #1b1c57, 1px -1px 0 #1b1c57, -1px 1px 0 #1b1c57, 1px 1px 0 #1b1c57;
+
+    span {
+      color: $white;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    opacity: 0.75;
+    margin-bottom: 32px;
+    max-width: 492px;
+  }
+
+  &__form {
+    position: relative;
+    max-width: 496px;
+    margin-bottom: 32px;
+  }
+
+  &__input {
+    padding: 16px 129px 16px 64px;
+    border: 1px solid $neutral-300;
+    border-radius: 32px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.57;
+    background-image: url("../img/icons/icons.svg#location");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 27px 16px;
+  }
+
+  &__button {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    padding: 13px 44px 13px 16px;
+    background-color: $green-500;
+    color: $white;
+    border-radius: 32px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    background-image: url("../img/icons/icons.svg#arrow-right");
+    background-repeat: no-repeat;
+    background-position: 69px 12px;
+    background-size: 24px 24px;
+  }
+
+  &__partners-title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 2;
+    color: $neutral-500;
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 32px;
+  }
+}
