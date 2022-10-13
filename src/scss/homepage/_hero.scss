@@ -2,6 +2,7 @@
   padding: 182px 0 92px;
   background: url("../img/hero-bg.png") top right / 720px 720px no-repeat,
     url("../img/hero-bg-2.png") top left / 741px 523px no-repeat;
+  margin-bottom: 120px;
 
   &__title {
     font-weight: 600;
@@ -58,10 +59,14 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
-    background-image: url("../img/icons/icons.svg#arrow-right");
-    background-repeat: no-repeat;
-    background-position: 69px 12px;
-    background-size: 24px 24px;
+  }
+
+  &__button-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 12px;
+    right: 16px;
   }
 
   &__partners-title {

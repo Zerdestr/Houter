@@ -72,3 +72,30 @@ main {
     -webkit-box-orient: vertical;
   }
 }
+
+.tagline {
+  font-weight: 500;
+  font-size: 14px;
+  color: $yellow-500;
+  padding-left: 40px;
+  margin-bottom: 12px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 32px;
+    height: 1px;
+    background-color: $yellow-500;
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.25;
+  color: $headline;
+  text-transform: capitalize;
+}

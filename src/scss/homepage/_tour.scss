@@ -1,0 +1,183 @@
+.tour {
+  position: relative;
+  padding: 120px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    right: -15vw;
+    width: 553px;
+    height: 560px;
+    background-image: url("../img/tour-bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+  }
+
+  .title {
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-size: 16px;
+    opacity: 0.75;
+    margin-bottom: 16px;
+    max-width: 413px;
+  }
+
+  &__detail {
+    font-weight: 600;
+    font-size: 16px;
+    color: $headline;
+    opacity: 0.75;
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    max-width: 440px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 16px;
+    column-gap: 53px;
+    padding-bottom: 32px;
+    border-bottom: 2px solid $neutral-100;
+    margin-bottom: 32px;
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    padding: 6px 0 6px 48px;
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    background-position: left center;
+
+    &:nth-child(1) {
+      background-image: url("../img/icons/icons.svg#bed");
+    }
+
+    &:nth-child(2) {
+      background-image: url("../img/icons/icons.svg#bath");
+    }
+
+    &:nth-child(3) {
+      background-image: url("../img/icons/icons.svg#car-garage");
+    }
+
+    &:nth-child(4) {
+      background-image: url("../img/icons/icons.svg#stairs-with-handrail");
+    }
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+  }
+
+  &__contact-photo {
+    margin-right: 24px;
+    border-radius: 50%;
+  }
+
+  &__contact-imfo {
+    margin-right: 59px;
+  }
+
+  &__contact-name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.33;
+    color: $neutral-900;
+    margin-bottom: 4px;
+  }
+
+  &__contact-work {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $neutral-500;
+  }
+
+  &__link {
+    display: flex;
+    padding: 13px 16px 13px 56px;
+    background-color: $green-500;
+    color: $white;
+    font-weight: 600;
+    line-height: 1.57;
+    border-radius: 32px;
+    position: relative;
+  }
+
+  &__link-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 16px;
+    top: 12px;
+  }
+
+  &__popup {
+    position: relative;
+    padding: 0 0 43px 40px;
+
+    &::after {
+      content: "";
+      background-color: rgba($color: $dark, $alpha: 0.2);
+      position: absolute;
+      top: 0;
+      left: calc(0px + 40px);
+      bottom: calc(0px + 43px);
+      right: 0;
+      z-index: 2;
+      border-radius: 4px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 21px);
+      left: calc(50% + 20px);
+      transform: translateX(-50%) translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba($color: $white, $alpha: 0.5);
+
+      filter: blur(0.5px);
+      background-image: url("../img/popup/popup-play.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 15px 21px;
+      z-index: 3;
+    }
+  }
+
+  &__popup-bg {
+    border-radius: 4px;
+  }
+
+  &__popup-list {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 12px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__popup-img {
+    border-radius: 4px;
+  }
+}
