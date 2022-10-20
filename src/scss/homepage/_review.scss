@@ -1,9 +1,33 @@
 .review {
   margin-bottom: 120px;
 
+  @media (max-width: 991px) {
+    margin-bottom: 90px;
+  }
+
+  @media (max-width: 756px) {
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: 567px) {
+    margin-bottom: 40px;
+  }
+
   .title {
     text-align: center;
     margin-bottom: 40px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 756px) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 567px) {
+      margin-bottom: 15px;
+    }
   }
 
   .tagline {
@@ -21,23 +45,28 @@
   &__swiper {
     overflow: visible;
     position: relative;
-    max-width: 740px;
+    max-width: 770px;
     margin: 0 auto;
-    transform: translateX(6%);
-    padding-bottom: 40px;
+    padding: 0 15px 40px;
   }
 
   &__wrapper {
     display: flex;
-    transition-property: transform;
   }
 
   &__slide {
     flex-shrink: 0;
+    height: max-content;
+    flex-direction: column;
+    display: flex;
   }
 
   &__slide-bg {
     opacity: 0.7;
+
+    @media (max-width: 567px) {
+      display: none;
+    }
   }
 
   &__slide-content {
@@ -49,6 +78,11 @@
     margin: -144px auto 0;
     position: relative;
     z-index: 3;
+
+    @media (max-width: 567px) {
+      padding: 15px;
+      margin: 0 auto;
+    }
   }
 
   &__slide-title {
@@ -72,6 +106,10 @@
 
   &__slide-photo {
     margin-right: 24px;
+
+    @media (max-width: 567px) {
+      margin-right: 10px;
+    }
   }
 
   &__slide-client {
@@ -105,6 +143,13 @@
     width: 28px;
     height: 28px;
     margin-right: 16px;
+
+    @media (max-width: 567px) {
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+      align-self: center;
+    }
   }
 
   &__pagination {

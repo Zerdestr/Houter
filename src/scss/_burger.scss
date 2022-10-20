@@ -3,15 +3,17 @@
   height: 30px;
   position: relative;
   cursor: pointer;
+  background-color: $grean-100;
+  border-radius: 5px;
 
   &::after {
     content: "";
     position: absolute;
     height: 2px;
-    background-color: $dark;
-    left: 2px;
-    right: 2px;
-    top: 5px;
+    background-color: $green-700;
+    left: 3px;
+    right: 3px;
+    top: 6px;
     transition: transform 0.2s ease-in-out, top 0.2s ease-in-out;
   }
 
@@ -19,16 +21,17 @@
     content: "";
     position: absolute;
     height: 2px;
-    background-color: $dark;
-    left: 2px;
-    right: 2px;
-    bottom: 5px;
+    background-color: $green-700;
+    left: 3px;
+    right: 3px;
+    bottom: 6px;
     transition: transform 0.2s ease-in-out, bottom 0.2s ease-in-out;
   }
 
   &--active {
     .burger__line {
-      height: 0;
+      left: 50%;
+      right: 50%;
     }
 
     &::after {
@@ -45,11 +48,11 @@
   &__line {
     position: absolute;
     top: 50%;
-    left: 2px;
-    right: 2px;
+    left: 3px;
+    right: 3px;
     transform: translateY(-50%);
     height: 2px;
-    background-color: $dark;
-    transition: height 0.2s ease-in-out;
+    background-color: $green-700;
+    transition: right 0.2s ease-in-out, left 0.2s ease-in-out;
   }
 }

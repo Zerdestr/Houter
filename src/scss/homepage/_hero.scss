@@ -1,8 +1,40 @@
 .hero {
-  padding: 182px 0 92px;
+  padding: 172px 0 82px;
   background: url("../img/hero-bg.png") top right / 720px 720px no-repeat,
-    url("../img/hero-bg-2.png") top left / 741px 523px no-repeat;
+    url("../img/hero-bg-2.png") -173px -162px / 741px 523px no-repeat;
   margin-bottom: 120px;
+
+  @media (max-width: 991px) {
+    padding: 132px 0 44px;
+    background: url("../img/hero-bg.png") top right / 620px 620px no-repeat,
+      url("../img/hero-bg-2.png") -173px -162px / 641px 423px no-repeat;
+    margin-bottom: 90px;
+  }
+
+  @media (max-width: 756px) {
+    padding: 105px 0 0;
+    background: url("../img/hero-bg.png") top right / 520px 520px no-repeat,
+      url("../img/hero-bg-2.png") -173px -162px / 541px 323px no-repeat;
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: 567px) {
+    background: none;
+    padding: 65px 0 0;
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    max-width: max-content;
+    background-color: rgba($color: $white, $alpha: 0.7);
+    padding: 10px 10px 10px 0;
+    border-radius: 5px;
+
+    @media (max-width: 567px) {
+      max-width: 100%;
+      padding: 10px;
+    }
+  }
 
   &__title {
     font-weight: 600;
@@ -19,6 +51,23 @@
     span {
       color: $white;
     }
+
+    @media (max-width: 991px) {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 756px) {
+      font-size: 30px;
+      margin-bottom: 16px;
+      max-width: 335px;
+    }
+
+    @media (max-width: 567px) {
+      font-size: 22px;
+      margin-bottom: 12px;
+      max-width: 280px;
+    }
   }
 
   &__text {
@@ -26,12 +75,30 @@
     opacity: 0.75;
     margin-bottom: 32px;
     max-width: 492px;
+
+    @media (max-width: 991px) {
+      max-width: 400px;
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: 991px) {
+      max-width: 400px;
+      margin-bottom: 22px;
+    }
   }
 
   &__form {
     position: relative;
     max-width: 496px;
     margin-bottom: 32px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: 991px) {
+      margin-bottom: 22px;
+    }
   }
 
   &__input {
@@ -79,5 +146,12 @@
   &__list {
     display: flex;
     column-gap: 32px;
+    flex-wrap: wrap;
+
+    @media (max-width: 567px) {
+      column-gap: 104px;
+      row-gap: 15px;
+      justify-content: center;
+    }
   }
 }

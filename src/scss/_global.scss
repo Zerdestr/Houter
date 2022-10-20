@@ -32,12 +32,14 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
-  overflow: hidden;
 }
 
 main {
   flex: 1 1 auto;
+  max-width: 1940px;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
 }
 
 .container {
@@ -76,6 +78,7 @@ main {
 .tagline {
   font-weight: 500;
   font-size: 14px;
+  line-height: 1.28;
   color: $yellow-500;
   padding-left: 40px;
   margin-bottom: 12px;
@@ -90,6 +93,10 @@ main {
     height: 1px;
     background-color: $yellow-500;
   }
+
+  @media (max-width: 991px) {
+    margin-bottom: 10px;
+  }
 }
 
 .title {
@@ -98,4 +105,15 @@ main {
   line-height: 1.25;
   color: $headline;
   text-transform: capitalize;
+
+  @media (max-width: 991px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 756px) {
+    font-size: 24px;
+  }
+  @media (max-width: 576px) {
+    font-size: 20px;
+  }
 }

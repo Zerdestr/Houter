@@ -1,6 +1,6 @@
 .form {
   &__form {
-    padding: 65px 0;
+    padding: 65px 10px;
     background-image: url("../img/form/form-bg.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -9,6 +9,14 @@
     flex-direction: column;
     position: relative;
     border-radius: 32px;
+
+    @media (max-width: 756px) {
+      padding: 45px 10px;
+    }
+
+    @media (max-width: 567px) {
+      padding: 25px 10px;
+    }
 
     &::before {
       content: "";
@@ -19,6 +27,19 @@
       top: 38px;
       left: 44px;
       z-index: 1;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (max-width: 991px) {
+        width: 150px;
+        height: 150px;
+        top: 67px;
+        left: 10px;
+      }
+
+      @media (max-width: 756px) {
+        display: none;
+      }
     }
 
     &::after {
@@ -30,6 +51,19 @@
       top: 44px;
       right: 73px;
       z-index: 1;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (max-width: 991px) {
+        width: 150px;
+        height: 150px;
+        top: 67px;
+        right: 10px;
+      }
+
+      @media (max-width: 756px) {
+        display: none;
+      }
     }
   }
 
@@ -45,13 +79,28 @@
     margin-bottom: 32px;
     position: relative;
     z-index: 2;
+
+    @media (max-width: 991px) {
+      font-size: 28px;
+    }
+
+    @media (max-width: 756px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 567px) {
+      font-size: 20px;
+    }
   }
 
   &__wrapper {
     margin: 0 auto;
     position: relative;
-    position: relative;
     z-index: 2;
+
+    @media (max-width: 567px) {
+      margin: 0;
+    }
   }
 
   &__input {
@@ -73,6 +122,12 @@
       color: $neutral-500;
       line-height: 1.57;
     }
+
+    @media (max-width: 567px) {
+      margin-bottom: 20px;
+      padding: 16px 16px 16px 64px;
+      display: block;
+    }
   }
 
   &__button {
@@ -86,5 +141,12 @@
     padding: 12px 16px;
     background-color: $green-500;
     border-radius: 32px;
+
+    @media (max-width: 567px) {
+      position: static;
+      max-width: max-content;
+      margin: 0 auto;
+      display: block;
+    }
   }
 }

@@ -13,21 +13,21 @@
 
       <ul class="recommendation__filter">
         <li class="recommendation__item">
-          <button class="recommendation__button recommendation__button--active">
+          <button class="recommendation__button recommendation__button--active" data-target="house">
             <svg class="recommendation__button-icon">
               <use xlink:href="@img/icons/icons.svg#house"></use>
             </svg>
             House</button>
         </li>
         <li class="recommendation__item">
-          <button class="recommendation__button">
+          <button class="recommendation__button" data-target="villa">
             <svg class="recommendation__button-icon">
               <use xlink:href="@img/icons/icons.svg#villa"></use>
             </svg>
             Villa</button>
         </li>
         <li class="recommendation__item">
-          <button class="recommendation__button">
+          <button class="recommendation__button" data-target="apartment">
             <svg class="recommendation__button-icon">
               <use xlink:href="@img/icons/icons.svg#apartment"></use>
             </svg>
@@ -36,13 +36,26 @@
 
       </ul>
 
+      <div class="recommendation__swiper-nav">
+        <div class="recommendation__button-prev">
+          <svg class="recommendation__swiper-icon">
+            <use xlink:href="@img/icons/icons.svg#arrow-left"></use>
+          </svg>
+        </div>
+        <div class="recommendation__button-next">
+          <svg class="recommendation__swiper-icon">
+            <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+          </svg>
+        </div>
+      </div>
+
     </div>
 
     <div class="recommendation__swiper">
 
       <div class="recommendation__wrapper">
 
-        <div class="recommendation__slide">
+        <div class="recommendation__slide recommendation__slide--visible" data-target="house-slide">
           <a class="recommendation__slide-link" href="#">
             <img class="recommendation__image" src="@img/recomendation/slide-1.png" alt="recommendation photo"
               width="340" height="382">
@@ -71,9 +84,97 @@
           </a>
         </div>
 
-        <div class="recommendation__slide">
+        <div class="recommendation__slide recommendation__slide--visible" data-target="house-slide">
           <a class="recommendation__slide-link" href="#">
-            <img class="recommendation__image" src="@img/recomendation/slide-2.png" alt="recommendation photo">
+            <img class="recommendation__image" src="@img/recomendation/slide-1.png" alt="recommendation photo"
+              width="340" height="382">
+
+            <span class="recommendation__category recommendation__category--read">
+              <svg class="recommendation__category-icon">
+                <use xlink:href="@img/icons/icons.svg#fire"></use>
+              </svg>
+              Popular</span>
+
+          </a>
+
+          <h3 class="recommendation__slide-title">Roselands House
+          </h3>
+          <span class="recommendation__price">$ 35.000.000</span>
+
+          <a class="recommendation__slide-buttom" href="#">
+            <img class="recommendation__manager-photo" src="@img/users/user-1.png" alt="" width="40" height="40">
+
+            <div class="recommendation__maneger-info">
+              <h4 class="recommendation__manager-name">Dianne Russell
+              </h4>
+
+              <span class="recommendation__manager-location">Manchester, Kentucky</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="recommendation__slide recommendation__slide--visible" data-target="house-slide">
+          <a class="recommendation__slide-link" href="#">
+            <img class="recommendation__image" src="@img/recomendation/slide-1.png" alt="recommendation photo"
+              width="340" height="382">
+
+            <span class="recommendation__category recommendation__category--read">
+              <svg class="recommendation__category-icon">
+                <use xlink:href="@img/icons/icons.svg#fire"></use>
+              </svg>
+              Popular</span>
+
+          </a>
+
+          <h3 class="recommendation__slide-title">Roselands House
+          </h3>
+          <span class="recommendation__price">$ 35.000.000</span>
+
+          <a class="recommendation__slide-buttom" href="#">
+            <img class="recommendation__manager-photo" src="@img/users/user-1.png" alt="" width="40" height="40">
+
+            <div class="recommendation__maneger-info">
+              <h4 class="recommendation__manager-name">Dianne Russell
+              </h4>
+
+              <span class="recommendation__manager-location">Manchester, Kentucky</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="recommendation__slide recommendation__slide--visible" data-target="house-slide">
+          <a class="recommendation__slide-link" href="#">
+            <img class="recommendation__image" src="@img/recomendation/slide-1.png" alt="recommendation photo"
+              width="340" height="382">
+
+            <span class="recommendation__category recommendation__category--read">
+              <svg class="recommendation__category-icon">
+                <use xlink:href="@img/icons/icons.svg#fire"></use>
+              </svg>
+              Popular</span>
+
+          </a>
+
+          <h3 class="recommendation__slide-title">Roselands House
+          </h3>
+          <span class="recommendation__price">$ 35.000.000</span>
+
+          <a class="recommendation__slide-buttom" href="#">
+            <img class="recommendation__manager-photo" src="@img/users/user-1.png" alt="" width="40" height="40">
+
+            <div class="recommendation__maneger-info">
+              <h4 class="recommendation__manager-name">Dianne Russell
+              </h4>
+
+              <span class="recommendation__manager-location">Manchester, Kentucky</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="recommendation__slide " data-target="villa-slide">
+          <a class="recommendation__slide-link" href="#">
+            <img class="recommendation__image" src="@img/recomendation/slide-2.png" alt="recommendation photo"
+              width="340" height="382">
 
             <span class="recommendation__category recommendation__category--blue">
               <svg class="recommendation__category-icon">
@@ -98,9 +199,10 @@
           </a>
         </div>
 
-        <div class="recommendation__slide">
+        <div class="recommendation__slide " data-target="villa-slide">
           <a class="recommendation__slide-link" href="#">
-            <img class="recommendation__image" src="@img/recomendation/slide-3.png" alt="recommendation photo">
+            <img class="recommendation__image" src="@img/recomendation/slide-3.png" alt="recommendation photo"
+              width="340" height="382">
 
             <span class="recommendation__category recommendation__category--grean ">
               <svg class="recommendation__category-icon">
@@ -125,9 +227,10 @@
           </a>
         </div>
 
-        <div class="recommendation__slide">
+        <div class="recommendation__slide recommendation__slide--visible" data-target="house-slide">
           <a class="recommendation__slide-link" href="#">
-            <img class="recommendation__image" src="@img/recomendation/slide-4.png" alt="recommendation photo">
+            <img class="recommendation__image" src="@img/recomendation/slide-4.png" alt="recommendation photo"
+              width="340" height="382">
 
             <span class="recommendation__category recommendation__category--read">
               <svg class="recommendation__category-icon">
@@ -152,9 +255,10 @@
           </a>
         </div>
 
-        <div class="recommendation__slide">
+        <div class="recommendation__slide " data-target="apartment-slide">
           <a class="recommendation__slide-link" href="#">
-            <img class="recommendation__image" src="@img/recomendation/slide-1.png" alt="recommendation photo">
+            <img class="recommendation__image" src="@img/recomendation/slide-1.png" alt="recommendation photo"
+              width="340" height="382">
 
             <span class="recommendation__category recommendation__category--read">
               <svg class="recommendation__category-icon">
@@ -180,9 +284,10 @@
 
         </div>
 
-        <div class="recommendation__slide">
+        <div class="recommendation__slide " data-target="villa-slide">
           <a class="recommendation__slide-link" href="#">
-            <img class="recommendation__image" src="@img/recomendation/slide-2.png" alt="recommendation photo">
+            <img class="recommendation__image" src="@img/recomendation/slide-2.png" alt="recommendation photo"
+              width="340" height="382">
 
             <span class="recommendation__category recommendation__category--blue">
               <svg class="recommendation__category-icon">
@@ -208,9 +313,10 @@
 
         </div>
 
-        <div class="recommendation__slide">
+        <div class="recommendation__slide " data-target="apartment-slide">
           <a class="recommendation__slide-link" href="#">
-            <img class="recommendation__image" src="@img/recomendation/slide-3.png" alt="recommendation photo">
+            <img class="recommendation__image" src="@img/recomendation/slide-3.png" alt="recommendation photo"
+              width="340" height="382">
 
             <span class="recommendation__category recommendation__category--grean">
               <svg class="recommendation__category-icon">
@@ -237,19 +343,6 @@
           </a>
         </div>
       </div>
-
-
-      <div class="recommendation__button-prev">
-        <svg class="recommendation__button-next-icon">
-          <use xlink:href="@img/icons/icons.svg#arrow-left"></use>
-        </svg>
-      </div>
-      <div class="recommendation__button-next">
-        <svg class="recommendation__button-next-icon">
-          <use xlink:href="@img/icons/icons.svg#arrow-right"></use>
-        </svg>
-      </div>
-
     </div>
 
   </div>

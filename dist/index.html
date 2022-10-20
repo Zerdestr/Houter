@@ -17,46 +17,52 @@
   <div class="container">
     <nav class="header__nav">
 
-      <a class="logo" href="#">
+      <a class="logo header__logo" href="#">
         <img class="logo__link" src="img/logo.svg" alt="logo" width="115" height="36">
       </a>
 
-      <ul class="header__list">
+      <div class="header__menu">
+        <ul class="header__list">
 
-        <li class="header__item">
-          <a class="header__link" href="#">About Us</a>
-        </li>
+          <li class="header__item">
+            <a class="header__link" href="#">About Us</a>
+          </li>
 
-        <li class="header__item">
-          <a class="header__link" href="#">Article</a>
-        </li>
+          <li class="header__item">
+            <a class="header__link" href="#">Article</a>
+          </li>
 
-        <li class="header__item header__item--drop">
-          <a class="header__link header__link--drop" href="#">Property
-            <svg class="header__item-icon" width="18" height="18">
-              <use xlink:href="img/icons/icons.svg#arrow"></use>
-            </svg>
-          </a>
+          <li class="header__item header__item--drop">
+            <div class="header__link header__link--drop">Property
+              <svg class="header__item-icon" width="18" height="18">
+                <use xlink:href="img/icons/icons.svg#arrow"></use>
+              </svg>
+            </div>
 
-          <ul class="header__drop">
-            <li class="header__drop-item">
-              <a class="header__drop-link" href="#">1</a>
-            </li>
+            <ul class="header__drop">
+              <li class="header__drop-item">
+                <a class="header__drop-link" href="#">1</a>
+              </li>
 
-            <li class="header__drop-item">
-              <a class="header__drop-link" href="#">2</a>
-            </li>
+              <li class="header__drop-item">
+                <a class="header__drop-link" href="#">2</a>
+              </li>
 
-            <li class="header__drop-item">
-              <a class="header__drop-link" href="#">3</a>
-            </li>
-          </ul>
+              <li class="header__drop-item">
+                <a class="header__drop-link" href="#">3</a>
+              </li>
+            </ul>
 
-        </li>
+          </li>
 
-      </ul>
+        </ul>
+      </div>
 
       <a class="header__reg" href="#">Sign Up!</a>
+
+      <button class="burger header__burger" type="button">
+        <span class="burger__line"></span>
+      </button>
     </nav>
   </div>
 </header>
@@ -66,7 +72,7 @@
 
   <div class="container">
 
-    <div class="content">
+    <div class="hero__content">
 
       <h1 class="hero__title">find the place to
         live <span>your dreams</span>
@@ -146,21 +152,21 @@
 
       <ul class="recommendation__filter">
         <li class="recommendation__item">
-          <button class="recommendation__button recommendation__button--active">
+          <button class="recommendation__button recommendation__button--active" data-target="house">
             <svg class="recommendation__button-icon">
               <use xlink:href="img/icons/icons.svg#house"></use>
             </svg>
             House</button>
         </li>
         <li class="recommendation__item">
-          <button class="recommendation__button">
+          <button class="recommendation__button" data-target="villa">
             <svg class="recommendation__button-icon">
               <use xlink:href="img/icons/icons.svg#villa"></use>
             </svg>
             Villa</button>
         </li>
         <li class="recommendation__item">
-          <button class="recommendation__button">
+          <button class="recommendation__button" data-target="apartment">
             <svg class="recommendation__button-icon">
               <use xlink:href="img/icons/icons.svg#apartment"></use>
             </svg>
@@ -169,13 +175,26 @@
 
       </ul>
 
+      <div class="recommendation__swiper-nav">
+        <div class="recommendation__button-prev">
+          <svg class="recommendation__swiper-icon">
+            <use xlink:href="img/icons/icons.svg#arrow-left"></use>
+          </svg>
+        </div>
+        <div class="recommendation__button-next">
+          <svg class="recommendation__swiper-icon">
+            <use xlink:href="img/icons/icons.svg#arrow-right"></use>
+          </svg>
+        </div>
+      </div>
+
     </div>
 
     <div class="recommendation__swiper">
 
       <div class="recommendation__wrapper">
 
-        <div class="recommendation__slide">
+        <div class="recommendation__slide recommendation__slide--visible" data-target="house-slide">
           <a class="recommendation__slide-link" href="#">
             <img class="recommendation__image" src="img/recomendation/slide-1.png" alt="recommendation photo"
               width="340" height="382">
@@ -204,9 +223,97 @@
           </a>
         </div>
 
-        <div class="recommendation__slide">
+        <div class="recommendation__slide recommendation__slide--visible" data-target="house-slide">
           <a class="recommendation__slide-link" href="#">
-            <img class="recommendation__image" src="img/recomendation/slide-2.png" alt="recommendation photo">
+            <img class="recommendation__image" src="img/recomendation/slide-1.png" alt="recommendation photo"
+              width="340" height="382">
+
+            <span class="recommendation__category recommendation__category--read">
+              <svg class="recommendation__category-icon">
+                <use xlink:href="img/icons/icons.svg#fire"></use>
+              </svg>
+              Popular</span>
+
+          </a>
+
+          <h3 class="recommendation__slide-title">Roselands House
+          </h3>
+          <span class="recommendation__price">$ 35.000.000</span>
+
+          <a class="recommendation__slide-buttom" href="#">
+            <img class="recommendation__manager-photo" src="img/users/user-1.png" alt="" width="40" height="40">
+
+            <div class="recommendation__maneger-info">
+              <h4 class="recommendation__manager-name">Dianne Russell
+              </h4>
+
+              <span class="recommendation__manager-location">Manchester, Kentucky</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="recommendation__slide recommendation__slide--visible" data-target="house-slide">
+          <a class="recommendation__slide-link" href="#">
+            <img class="recommendation__image" src="img/recomendation/slide-1.png" alt="recommendation photo"
+              width="340" height="382">
+
+            <span class="recommendation__category recommendation__category--read">
+              <svg class="recommendation__category-icon">
+                <use xlink:href="img/icons/icons.svg#fire"></use>
+              </svg>
+              Popular</span>
+
+          </a>
+
+          <h3 class="recommendation__slide-title">Roselands House
+          </h3>
+          <span class="recommendation__price">$ 35.000.000</span>
+
+          <a class="recommendation__slide-buttom" href="#">
+            <img class="recommendation__manager-photo" src="img/users/user-1.png" alt="" width="40" height="40">
+
+            <div class="recommendation__maneger-info">
+              <h4 class="recommendation__manager-name">Dianne Russell
+              </h4>
+
+              <span class="recommendation__manager-location">Manchester, Kentucky</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="recommendation__slide recommendation__slide--visible" data-target="house-slide">
+          <a class="recommendation__slide-link" href="#">
+            <img class="recommendation__image" src="img/recomendation/slide-1.png" alt="recommendation photo"
+              width="340" height="382">
+
+            <span class="recommendation__category recommendation__category--read">
+              <svg class="recommendation__category-icon">
+                <use xlink:href="img/icons/icons.svg#fire"></use>
+              </svg>
+              Popular</span>
+
+          </a>
+
+          <h3 class="recommendation__slide-title">Roselands House
+          </h3>
+          <span class="recommendation__price">$ 35.000.000</span>
+
+          <a class="recommendation__slide-buttom" href="#">
+            <img class="recommendation__manager-photo" src="img/users/user-1.png" alt="" width="40" height="40">
+
+            <div class="recommendation__maneger-info">
+              <h4 class="recommendation__manager-name">Dianne Russell
+              </h4>
+
+              <span class="recommendation__manager-location">Manchester, Kentucky</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="recommendation__slide " data-target="villa-slide">
+          <a class="recommendation__slide-link" href="#">
+            <img class="recommendation__image" src="img/recomendation/slide-2.png" alt="recommendation photo"
+              width="340" height="382">
 
             <span class="recommendation__category recommendation__category--blue">
               <svg class="recommendation__category-icon">
@@ -231,9 +338,10 @@
           </a>
         </div>
 
-        <div class="recommendation__slide">
+        <div class="recommendation__slide " data-target="villa-slide">
           <a class="recommendation__slide-link" href="#">
-            <img class="recommendation__image" src="img/recomendation/slide-3.png" alt="recommendation photo">
+            <img class="recommendation__image" src="img/recomendation/slide-3.png" alt="recommendation photo"
+              width="340" height="382">
 
             <span class="recommendation__category recommendation__category--grean ">
               <svg class="recommendation__category-icon">
@@ -258,9 +366,10 @@
           </a>
         </div>
 
-        <div class="recommendation__slide">
+        <div class="recommendation__slide recommendation__slide--visible" data-target="house-slide">
           <a class="recommendation__slide-link" href="#">
-            <img class="recommendation__image" src="img/recomendation/slide-4.png" alt="recommendation photo">
+            <img class="recommendation__image" src="img/recomendation/slide-4.png" alt="recommendation photo"
+              width="340" height="382">
 
             <span class="recommendation__category recommendation__category--read">
               <svg class="recommendation__category-icon">
@@ -285,9 +394,10 @@
           </a>
         </div>
 
-        <div class="recommendation__slide">
+        <div class="recommendation__slide " data-target="apartment-slide">
           <a class="recommendation__slide-link" href="#">
-            <img class="recommendation__image" src="img/recomendation/slide-1.png" alt="recommendation photo">
+            <img class="recommendation__image" src="img/recomendation/slide-1.png" alt="recommendation photo"
+              width="340" height="382">
 
             <span class="recommendation__category recommendation__category--read">
               <svg class="recommendation__category-icon">
@@ -313,9 +423,10 @@
 
         </div>
 
-        <div class="recommendation__slide">
+        <div class="recommendation__slide " data-target="villa-slide">
           <a class="recommendation__slide-link" href="#">
-            <img class="recommendation__image" src="img/recomendation/slide-2.png" alt="recommendation photo">
+            <img class="recommendation__image" src="img/recomendation/slide-2.png" alt="recommendation photo"
+              width="340" height="382">
 
             <span class="recommendation__category recommendation__category--blue">
               <svg class="recommendation__category-icon">
@@ -341,9 +452,10 @@
 
         </div>
 
-        <div class="recommendation__slide">
+        <div class="recommendation__slide " data-target="apartment-slide">
           <a class="recommendation__slide-link" href="#">
-            <img class="recommendation__image" src="img/recomendation/slide-3.png" alt="recommendation photo">
+            <img class="recommendation__image" src="img/recomendation/slide-3.png" alt="recommendation photo"
+              width="340" height="382">
 
             <span class="recommendation__category recommendation__category--grean">
               <svg class="recommendation__category-icon">
@@ -370,19 +482,6 @@
           </a>
         </div>
       </div>
-
-
-      <div class="recommendation__button-prev">
-        <svg class="recommendation__button-next-icon">
-          <use xlink:href="img/icons/icons.svg#arrow-left"></use>
-        </svg>
-      </div>
-      <div class="recommendation__button-next">
-        <svg class="recommendation__button-next-icon">
-          <use xlink:href="img/icons/icons.svg#arrow-right"></use>
-        </svg>
-      </div>
-
     </div>
 
   </div>
@@ -392,86 +491,92 @@
 
   <div class="container">
 
-    <div class="tour__content">
+    <div class="tour__wrapper">
 
-      <p class="tagline">Ready to Sell!</p>
-      <h2 class="title">Let’s tour and see our house!</h2>
+      <div class="tour__content">
 
-      <p class="tour__text">
-        Houses recommended by our partners that have been curated to become the home of your dreams!
-      </p>
+        <p class="tagline">Ready to Sell!</p>
+        <h2 class="title">Let’s tour and see our house!</h2>
 
-      <p class="tour__detail">House Detail</p>
+        <p class="tour__text">
+          Houses recommended by our partners that have been curated to become the home of your dreams!
+        </p>
 
-      <ul class="tour__list">
+        <p class="tour__detail">House Detail</p>
 
-        <li class="tour__item">
-          4 Bedrooms
-        </li>
+        <ul class="tour__list">
 
-        <li class="tour__item">
-          2 Bathrooms
-        </li>
+          <li class="tour__item">
+            4 Bedrooms
+          </li>
 
-        <li class="tour__item">
-          1 Carport
-        </li>
+          <li class="tour__item">
+            2 Bathrooms
+          </li>
 
-        <li class="tour__item">
-          2 Floors
-        </li>
+          <li class="tour__item">
+            1 Carport
+          </li>
 
-      </ul>
+          <li class="tour__item">
+            2 Floors
+          </li>
 
-      <div class="tour__contact">
+        </ul>
 
-        <img class="tour__contact-photo" src="img/users/user-1.png" alt="" width="56" height="56">
+        <div class="tour__contact">
 
-        <div class="tour__contact-imfo">
+          <img class="tour__contact-photo" src="img/users/user-1.png" alt="" width="56" height="56">
 
-          <h3 class="tour__contact-name">Dianne Russell</h3>
+          <div class="tour__contact-imfo">
 
-          <p class="tour__contact-work">Manager Director</p>
+            <h3 class="tour__contact-name">Dianne Russell</h3>
+
+            <p class="tour__contact-work">Manager Director</p>
+
+          </div>
+
+          <a class="tour__link" href="#">
+            <svg class="tour__link-icon">
+              <use xlink:href="img/icons/icons.svg#call"></use>
+            </svg>
+            Contact Now</a>
 
         </div>
-
-        <a class="tour__link" href="#">
-          <svg class="tour__link-icon">
-            <use xlink:href="img/icons/icons.svg#call"></use>
-          </svg>
-          Contact Now</a>
-
       </div>
+
+      <a class="tour__popup" href="#">
+
+        <img class="tour__popup-bg" src="img/popup/popup.png" alt="">
+
+
+        <ul class="tour__popup-list">
+
+          <li class="tour__popup-item">
+
+            <img class="tour__popup-img" src="img/popup/popup-img-1.png" alt="" width="296" height="168">
+
+          </li>
+
+          <li class="tour__popup-item">
+
+            <img class="tour__popup-img" src="img/popup/popup-img-2.png" alt="" width="96" height="80">
+
+          </li>
+
+          <li class="tour__popup-item">
+
+            <img class="tour__popup-img" src="img/popup/popup-img-3.png" alt="" width="96" height="80">
+
+          </li>
+
+        </ul>
+
+      </a>
+
     </div>
 
-    <a class="tour__popup" href="#">
 
-      <img class="tour__popup-bg" src="img/popup/popup.png" alt="">
-
-
-      <ul class="tour__popup-list">
-
-        <li class="tour__popup-item">
-
-          <img class="tour__popup-img" src="img/popup/popup-img-1.png" alt="" width="296" height="168">
-
-        </li>
-
-        <li class="tour__popup-item">
-
-          <img class="tour__popup-img" src="img/popup/popup-img-2.png" alt="" width="96" height="80">
-
-        </li>
-
-        <li class="tour__popup-item">
-
-          <img class="tour__popup-img" src="img/popup/popup-img-3.png" alt="" width="96" height="80">
-
-        </li>
-
-      </ul>
-
-    </a>
 
   </div>
 
@@ -732,41 +837,38 @@
 
       </ul>
 
-      <div class="find__main-article">
+      <div class="find__right">
 
-        <a class="find__arcicle-link" href="#">
+        <article class="article article--big">
+          <a class="article__link" href="#">
 
+            <img class="article__img" src="img/find/item-4.png" alt="" width="560" height="280">
 
+            <div class="article__wrapper">
 
-          <img class="find__arcicle-img" src="img/find/item-4.png" alt="" width="560" height="280">
+              <div class="article__top">
+                <img class="article__top-img" src="img/users/user-4.png" alt="" width="32" height="32">
 
+                <div class="article__name">Cameron Williamson</div>
+              </div>
 
-          <div class="find__arcicle-top">
-            <img class="find__arcicle-top-img" src="img/users/user-4.png" alt="" width="32" height="32">
+              <h3 class="article__title">12 Things to know before buying a house</h3>
 
-            <div class="find__arcicle-name">Darlene Robertson</div>
-          </div>
+              <p class="article__text">Want to buy a house but are unsure about what we should know, here I will try to
+                explain what we should know and check
+                when we want to buy a house </p>
 
-          <h3 class="find__arcicle-title">
-            12 Things to know before buying a house
+              <div class="article__buttom">
 
-          </h3>
+                <span>8 min read</span>
+                |
+                <time datetime="2021-04-25">25 Apr 2021</time>
 
-          <p class="find__arcicle-text">
-            Want to buy a house but are unsure about what we should know, here I will try
-            to explain what we should know and check
-            when we want to buy a house
-          </p>
+              </div>
 
-          <div class="find__arcicle-buttom">
-
-            <span>8 min read</span>
-            |
-            <time datetime="2021-04-25">25 Apr 2021</time>
-
-          </div>
-
-        </a>
+            </div>
+          </a>
+        </article>
 
       </div>
 

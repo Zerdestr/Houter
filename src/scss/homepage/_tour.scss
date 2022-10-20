@@ -1,26 +1,64 @@
 .tour {
   position: relative;
-  padding: 120px 0;
+  margin-bottom: 120px;
+
+  @media (max-width: 991px) {
+    margin-bottom: 90px;
+  }
+
+  @media (max-width: 756px) {
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: 567px) {
+    margin-bottom: 40px;
+  }
 
   &::before {
     content: "";
     position: absolute;
+    z-index: -1;
     top: -120px;
-    right: -15vw;
+    right: -10%;
     width: 553px;
     height: 560px;
     background-image: url("../img/tour-bg.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (max-width: 991px) {
+      width: 453px;
+      height: 460px;
+    }
+
+    @media (max-width: 756px) {
+      width: 353px;
+      height: 360px;
+    }
+
+    @media (max-width: 567px) {
+      width: 253px;
+      height: 260px;
+    }
   }
-  .container {
+
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    row-gap: 30px;
+
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__content {
+    @media (max-width: 567px) {
+      width: 100%;
+    }
   }
 
   .title {
@@ -45,7 +83,7 @@
   &__list {
     max-width: 440px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     row-gap: 16px;
     column-gap: 53px;
     padding-bottom: 32px;
@@ -82,6 +120,10 @@
   &__contact {
     display: flex;
     align-items: center;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    max-width: 440px;
   }
 
   &__contact-photo {
@@ -90,7 +132,7 @@
   }
 
   &__contact-imfo {
-    margin-right: 59px;
+    margin-right: auto;
   }
 
   &__contact-name {
@@ -141,6 +183,11 @@
       right: 0;
       z-index: 2;
       border-radius: 4px;
+
+      @media (max-width: 567px) {
+        left: 0;
+        bottom: 0;
+      }
     }
 
     &::before {
@@ -153,13 +200,21 @@
       height: 48px;
       border-radius: 50%;
       background: rgba($color: $white, $alpha: 0.5);
-
       filter: blur(0.5px);
       background-image: url("../img/popup/popup-play.svg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: 15px 21px;
       z-index: 3;
+
+      @media (max-width: 567px) {
+        top: 50%;
+        left: 50%;
+      }
+    }
+
+    @media (max-width: 567px) {
+      padding: 0;
     }
   }
 
@@ -175,9 +230,14 @@
     z-index: 5;
     bottom: 0;
     left: 0;
+
+    @media (max-width: 567px) {
+      display: none;
+    }
   }
 
   &__popup-img {
     border-radius: 4px;
+    object-fit: cover;
   }
 }
